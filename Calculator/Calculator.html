@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+<body>
+
+    <div class="Calculator-container">
+        <button id="toggle-history" class="history-btn">History</button>
+
+        <div class="display">
+            <div id="previous-operand" class="previous-operand"></div>
+            <div id="current-operand" class="current-operand">0</div>
+        </div>
+
+        <div class="buttons-grid">
+            <button class="btn memory" onclick="memoryClear()">MC</button>
+            <button class="btn memory" onclick="memoryRecall()">MR</button>
+            <button class="btn memory" onclick="memoryAdd()">M+</button>
+            <button class="btn ctrl" onclick="clearAll()">AC</button>
+
+            <button class="btn ctrl" onclick="appendOperator('**')">xʸ</button>
+            <button class="btn ctrl" onclick="calculateSquareRoot()">√</button>
+            <button class="btn ctrl" onclick="deleteLast()">DEL</button>
+            <button class="btn op" onclick="appendOperator('/')">÷</button>
+
+            <button class="btn num" onclick="appendNumber('7')">7</button>
+            <button class="btn num" onclick="appendNumber('8')">8</button>
+            <button class="btn num" onclick="appendNumber('9')">9</button>
+            <button class="btn op" onclick="appendOperator('*')">×</button>
+
+            <button class="btn num" onclick="appendNumber('4')">4</button>
+            <button class="btn num" onclick="appendNumber('5')">5</button>
+            <button class="btn num" onclick="appendNumber('6')">6</button>
+            <button class="btn op" onclick="appendOperator('-')">-</button>
+
+            <button class="btn num" onclick="appendNumber('1')">1</button>
+            <button class="btn num" onclick="appendNumber('2')">2</button>
+            <button class="btn num" onclick="appendNumber('3')">3</button>
+            <button class="btn op" onclick="appendOperator('+')">+</button>
+
+            <button class="btn num" onclick="appendNumber('0')">0</button>
+            <button class="btn num" onclick="appendNumber('.')">.</button>
+            <button class="btn equals" onclick="compute()">=</button>
+        </div>
+
+        <div id="history-panel" class="history-panel hidden">
+            <button onclick="toggleHistoryView()" class="close-panel-btn"> (: Back to Calculator</button>
+            <h3>Calculation History</h3>
+            <ul id="history-list"></ul>
+            <button onclick="clearHistory()" class="clear-hist-btn">Clear History</button>
+        </div>
+    </div>
+
+    <script src="Calculator.js"></script>
+</body>
+</html>
