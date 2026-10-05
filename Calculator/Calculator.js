@@ -5,6 +5,7 @@ const historyPanel = document.getElementById('history-panel');
 const historyList = document.getElementById('history-list');
 const toggleHistoryBtn = document.getElementById('toggle-history');
 
+
 // defining  some variable
 let currentInput = '0';
 let previousInput = '';
